@@ -17,4 +17,4 @@ jobs:
            
              
             - name : print Hello World
-              run: echo "hello world"
+              run: echo "hello world Nice"
