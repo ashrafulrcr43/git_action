@@ -1,19 +1,16 @@
-name : CICD Pipe line
-
+name : CICD OS Release Info
 
 on:
-    push:
-        branches:
-            - main
+  push:
+    branches:
+      - main
 
 jobs:
+  os_release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-
-    job1:
-        runs-on: ubuntu-latest
-        steps:
-            - name: read the file
-              uses: actions/checkout@v3
-             
-            - name : Show Listing
-              run: ls 
+      - name: Show OS Release Information
+        run: cat /etc/os-release
